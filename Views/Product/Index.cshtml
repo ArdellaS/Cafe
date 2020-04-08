@@ -1,0 +1,20 @@
+﻿@model CafeLab.Models.Product
+@{
+    ViewData["Title"] = "Index";
+    IEnumerable<Product> Products = (IEnumerable<Product>)ViewData["Products"];
+
+}
+
+<h1>Index</h1>
+<div>
+    <p>Treat yourself to our treats</p>
+    <ul>
+        @foreach (Product p in Products)
+        {
+            <li>@p.Name  (@p.Category) @p.Description $@p.Price</li>
+        }
+
+    </ul>
+</div>
+
+

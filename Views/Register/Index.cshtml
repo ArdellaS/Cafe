@@ -1,0 +1,17 @@
+﻿@model CafeLab.Models.RegInfo
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Join Us!</h1>
+
+<form asp-controller="Register" asp-action="takeinfo" method="post">
+
+    @Html.LabelFor(name => name.Name): @Html.EditorFor(name => name.Name, new { @class = "form-control-lg" }) <br>
+
+    @Html.LabelFor(email => email.Email): <input asp-for="Email" /> <br />
+
+    <input type="submit" value="Submit" />
+</form>
+
